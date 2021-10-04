@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    background-color: #1f938a;
+}
+
+.wrapper {
+    width: 500px;
+    margin: 70px auto 0;
+}
+
+.wrapper__item-header {
+    font-weight: 700;
+    color: #39a098;
+    background-color: #fff;
+    height: 50px;
+    padding: 15px;
+    border-bottom: 2px solid #39a098;
+    cursor: pointer;
+    position: relative;
+}
+
+.wrapper__item-header.active::after {
+    transform: rotate(0);
+} 
+
+.wrapper__item-header.active + .wrapper__item-body {
+    height: 180px;
+}
+
+.wrapper__item-header.active {
+    border-bottom: 2px solid transparent;
+}
+
+.wrapper__item-header:hover {
+    color: #01645d;
+    border-color: #01645d;
+}
+
+.wrapper__item-header::before,
+.wrapper__item-header::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #39a098;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.wrapper__item-header:hover::after, 
+.wrapper__item-header:hover::before
+{
+    background-color:#01645d;;
+}
+
+.wrapper__item-header::after {
+    transform: rotate(90deg);
+    transition: all 0.3s linear;
+}
+
+.wrapper__item:first-child .wrapper__item-header {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.wrapper__item:last-child .wrapper__item-header {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-color: transparent;
+}
+
+.wrapper__item-body {
+    height: 0;
+    transition: all 0.4s linear;
+    overflow: hidden;
+}
+
+.wrapper__item-body p {
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 22px;
+}
