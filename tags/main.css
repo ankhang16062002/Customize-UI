@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color:  #5372F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.wrapper {
+    background-color: #fff;
+    width: 490px;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.wrapper :where(.title, ul, li, i, .detail) {
+    display: flex;
+}
+
+.wrapper .title {
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.wrapper .title h2 {
+    font-size: 23px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.wrapper .title img {
+    width: 20px;
+    height: 20px;
+}
+
+.content p {
+    font-size: 15px;
+}
+
+.content ul {
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid #a6a6a6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.content ul li {
+    list-style: none;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    margin: 4px 3px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid #e3d1e1;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content ul li i {
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+    background: #dfdfdf;
+    color: #808080;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.content ul input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    flex: 1;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.detail {
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.detail span {
+    padding-right: 5px;
+}
+
+.detail button {
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    background: #5372F0;
+    padding: 9px 15px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
